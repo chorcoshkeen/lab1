@@ -25,7 +25,7 @@ jobs:
           if [ -f req.txt ]; then pip install -r req.txt; fi
       - name: Lint with pycodestyle
         run: |
-          pycodestyle . test
+          pycodestyle test
       - name: Test with pytest
         run: |
           PYTHONPATH=./:./ pytest test
