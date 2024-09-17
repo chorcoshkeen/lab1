@@ -38,7 +38,7 @@ def test_make_inference(monkeypatch, create_data):
     monkeypatch.setattr(Pipeline, "predict", mock_get_predictions)
 
     result = make_inference(in_model, create_data)
-    assert result == {"class": "Mammal"}
+    assert result == {"class": ["Mammal"]}
 
 
 @pytest.fixture()
